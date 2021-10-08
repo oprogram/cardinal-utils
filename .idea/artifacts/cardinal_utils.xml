@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cardinal-utils">
+    <output-path>$PROJECT_DIR$/out/artifacts/cardinal_utils</output-path>
+    <root id="archive" name="cardinal-utils.jar">
+      <element id="module-output" name="cardinal-utils" />
+    </root>
+  </artifact>
+</component>
