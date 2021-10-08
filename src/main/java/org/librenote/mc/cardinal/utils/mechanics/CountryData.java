@@ -33,7 +33,7 @@ public class CountryData {
     public String getCountryCode(Player player) {
         JsonObject content = new JsonObject();
         String ip = Objects.requireNonNull(player.getAddress()).getAddress().getHostAddress();
-        
+
         try {
             URL url = new URL("https://ipinfo.io/" + ip);
             HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();

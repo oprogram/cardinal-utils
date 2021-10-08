@@ -1,5 +1,6 @@
 package org.librenote.mc.cardinal.utils.events;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,7 +14,9 @@ public class PlayerJoin implements Listener {
         Player player = playerJoinEvent.getPlayer();
         if (!player.hasPlayedBefore()) {
             CountryData countryData = new CountryData();
+            String countryCode = countryData.getCountryCode(player);
             player.teleport(countryData.getCoords(countryData.getCountryCode(player), player.getWorld()));
+            player.sendMessage(ChatColor.RED + "Welcome to LibreCraft. You have spawned in " + countryData.getName(countryCode));
         }
     }
 }
